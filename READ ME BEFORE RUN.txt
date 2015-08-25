@@ -1,0 +1,6 @@
+Avoir nodeJS ainsi que MongoDB d'installé sur son PC
+Lancer en premier la BDD : ouvrir une commande dans C:\Program Files\MongoDB\Server\3.0\bin
+puis la commande suivante mongod --dbpath <chemin vers le dossier data du projet>
+
+Faire un npm install pour avoir les modules
+Lancer ensuite le serveur en ouvrant une commande et la commande suivante : node app.js

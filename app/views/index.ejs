@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JSFight</title>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/png" href="/img/favicon.png" />
+		<link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	</head>
+
+	<body>
+		<header>
+			<img src="/img/logo.png" alt="logo"/>
+		</header>
+		<div id="content">
+			<div class="formdiv">
+				<h2>Register</h2>
+				<form method="POST" action="/users/register">
+					<input type="text" name="username" placeholder="Username"><br>
+					<input type="password" name="password" placeholder="Password"><br>
+					<input type="password" name="confirmPasswd" placeholder="Confirm"><br>
+					<button class="signUp">Let's <span>fight !</span></button>
+				</form>
+				<p>I already have an account</p>
+				<form class="loginForm" method="POST" action="/users/connect">
+					<input type="text" name="username" placeholder="Username">
+					<input type="password" name="password" placeholder="Password"><br>
+					<button>Login</button>
+				</form>
+			</div>
+			<p id="error"><%= error %></p>
+			<p id="success"><%= success %></p>
+		</div>
+		<script type="text/javascript">
+			var error = document.getElementById("error");
+			var success = document.getElementById("success");
+
+			console.log("truc" + success.innerText || success.textContent);
+
+			if(success.innerText == "" || success.textContent == ""){
+				success.style.display = "none";
+			}
+			
+			if(error.innerText == "" || error.textContent == ""){
+				error.style.display = "none";
+			}
+		</script>
+	</body>
+</html>

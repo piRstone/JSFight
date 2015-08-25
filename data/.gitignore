@@ -1,0 +1,11 @@
+[^.]*
+JSFight.0
+JSFight.ns
+local.0
+local.ns
+mongod.lock
+storage.bson
+/*.0
+/*.ns
+/*.lock
+/*.bson

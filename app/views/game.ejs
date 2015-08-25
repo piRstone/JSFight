@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JSFight</title>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/png" href="../img/favicon.png" />
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	</head>
+
+	<body>
+		<header>
+			<button id="muteSound" onclick="mute()"></button>
+			<img src="../img/controls.png" alt="controls" class="controls">
+			<img src="../img/logo.png" alt="logo" class="logoGame"/>
+		</header>
+		<div id="modal">
+			<div class="modal_box">
+				<h4>Fight !</h4>
+				<p><span id="player"></span> wants to play with you !</p>
+				<button class="but accept" onclick="accept()">Accept</button><button class="but decline" onclick="decline()">Decline</button>
+			</div>
+		</div>
+		<div id="content">
+			<audio id="guile_mp3" controls>
+				<source src="../sounds/guile.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+			<div id="gameZone">
+				<div id="cacheJeu">
+					<button class="quickFight" onclick="quickFight()">Quick fight</button>
+				</div>
+                <canvas id="game" width="800" height="600"> 
+                  Texte alternatif pour les navigateurs ne supportant pas Canvas.
+                </canvas>
+			</div>
+			<div class="interactions">
+				<div class="littleHead">
+					<h5><%= username %></h5>
+					<a href="/users/disconnect" class="deco"><img src="../img/deco.png" alt=""></a>
+					<a id="rankBut" onclick="slideDown()">Ranking</a>
+					<div id="ranking">
+						<div id="rankContent">
+							<h2>Ranking</h2>
+							<table>
+								<tbody id="myRank">
+									<tr>
+										<th>Rank</th><th>Username</th><th>Win</th><th>Lose</th><th>Games</th>
+									</tr>
+								</tbody>
+							</table>
+							<div class="separator"></div>
+							<table>
+								<tbody id="generalRank">
+									<tr>
+										<th>Rank</th><th>Username</th><th>Win</th><th>Lose</th><th>Games</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="userList">
+					<div class="infoUser"><p><span>Connected user list</span> Click on a user to play with him</p></div>
+					<ul id="coUsers"></ul>
+					<div class="infoUser"><p><span>User list</span></p></div>
+					<ul id="users"></ul>
+				</div>
+				<div class="chat">
+					<div id="messagesBox">
+						<ul id="messages"></ul>
+					</div>
+					<div class="chatForm">
+							<input type="text" id="m" placeholder="Your message" autocomplete="off" onkeydown="touche(event)">
+							<button id="send" onclick="sendMsg()">SEND</button>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<script src="/js/socket.io.js"></script>
+		<script src="/js/front.js"></script>
+		<script src="/js/game.js"></script>
+	</body>
+</html>
