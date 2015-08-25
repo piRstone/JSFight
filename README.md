@@ -18,7 +18,7 @@ la requête.
 ### Serveur
 Le serveur est basé sur node.js
 
-## BDD
+### BDD
 La base de données utilise MongoDB.
 
 ### Design, template & contrôles
