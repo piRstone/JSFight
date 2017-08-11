@@ -3,7 +3,9 @@ SUPINFO Web project
 
 ## Développeurs 
 Pierre LAVALLEY
+
 Arnold RONDEL
+
 Kiran MORIN
 
 ## Principe
@@ -14,17 +16,32 @@ L'utilisateur peur voir les autres joueurs connectés en direct et leur
 proposer de jouer une partie. Le joueur sollicité peut accepter ou non 
 la requête.
 
-## Technologies
-### Serveur
-Le serveur est basé sur node.js
+## Installation
 
-### BDD
-La base de données utilise MongoDB.
+### Installer MongoDB
+
+**Sur Linux** : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+**Lancer le serveur MongoDB**
+
+`sudo service mongod start`
+
+### Installer NodeJS
+Installer NodeJS avec NPM.
+
+Une fois fait, installer les dépendances :
+
+`npm install`
+
+Puis lancer le serveur :
+
+`node app.js`
+
+L'app tourne sur le port 3000 par défaut. Ouvrir un navigateur à l'adresse :
+
+http://localhost:3000
 
 ### Design, template & contrôles
 La vue utilise l'extension .ejs et est développé en HTML5 et CSS3.
 Les animations et fonctionnalités sont codées en javascript natif, le jQuery
 étant interdit par le cahier des charges comme toute autre extension.
-
-## Licence
-Ce jeu est distribué sous la licence MIT
