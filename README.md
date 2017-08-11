@@ -1,7 +1,7 @@
 # JSFight
 SUPINFO Web project
 
-## Développeurs 
+## Développeurs
 Pierre LAVALLEY
 
 Arnold RONDEL
@@ -9,11 +9,11 @@ Arnold RONDEL
 Kiran MORIN
 
 ## Principe
-Il s'agit d'un stick fighter. Le joueur contrôle un personnage et doit 
+Il s'agit d'un stick fighter. Le joueur contrôle un personnage et doit
 combattre un adversaire en lui portant différents coups et coups spéciaux.
 Un classement est établit et mis à jour à l'issue de chaque partie.
 L'utilisateur peur voir les autres joueurs connectés en direct et leur
-proposer de jouer une partie. Le joueur sollicité peut accepter ou non 
+proposer de jouer une partie. Le joueur sollicité peut accepter ou non
 la requête.
 
 ## Installation
@@ -24,7 +24,7 @@ la requête.
 
 **Lancer le serveur MongoDB**
 
-`sudo service mongod start`
+`mongod --dbpath <chemin_du_projet>/data`
 
 ### Installer NodeJS
 Installer NodeJS avec NPM.
